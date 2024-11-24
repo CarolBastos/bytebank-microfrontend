@@ -1,0 +1,27 @@
+services:
+  orchestrator:
+    build:
+      context: ./orchestrator
+    ports:
+      - "9000:9000"
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - welcome
+      - util
+
+  welcome:
+    build:
+      context: ./welcome
+    ports:
+      - "8502:8502"
+    environment:
+      - NODE_ENV=development
+
+  util:
+    build:
+      context: ./util
+    ports:
+      - "8504:8504"
+    environment:
+      - NODE_ENV=development
