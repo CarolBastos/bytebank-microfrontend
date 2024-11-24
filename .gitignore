@@ -1,0 +1,49 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Diretórios de build
+/dist
+/build
+/.next
+/.turbo
+/.cache
+
+# Arquivos de configuração do editor
+/.idea
+/.vscode
+
+# Arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração do Git
+/.git/
+.gitmodules
+
+# Arquivos temporários
+*.swp
+*.swo
+
+# Arquivos de log
+*.log
+
+# Dependências locais de desenvolvedor
+*.env
+
+# Arquivos de teste
+coverage/
+
+# Husky
+.husky/
+
+# Arquivos de cache do Webpack
+.cache/
+
+# Arquivos específicos do sistema operacional
+Thumbs.db
+Desktop.ini

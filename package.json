@@ -1,0 +1,29 @@
+{
+    "name": "bytebank-microfrontend",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "start": "concurrently \"npm run start:welcome\" \"npm run start:util\" \"npm run start:orchestrator\"",
+      "start:welcome": "cd welcome && npm install && npm run start",
+      "start:util": "cd util && npm install && npm run start",
+      "start:orchestrator": "cd orchestrator && npm install && npm run start",
+      "build": "concurrently \"npm run build:welcome\" \"npm run build:util\" \"npm run build:orchestrator\"",
+      "build:welcome": "cd welcome && npm install && npm run build",
+      "build:util": "cd util && npm install && npm run build",
+      "build:orchestrator": "cd orchestrator && npm install && npm run build",
+      "lint": "eslint . --ext js,jsx,ts,tsx",
+      "format": "prettier --write .",
+      "check-format": "prettier --check ."
+    },
+    "devDependencies": {
+      "concurrently": "^7.0.0",
+      "eslint": "^8.0.0",
+      "prettier": "^2.0.0"
+    },
+    "workspaces": [
+      "welcome",
+      "util",
+      "orchestrator"
+    ]
+  }
+  
